@@ -4,14 +4,45 @@
     <meta charset="utf-8"/>
     <title></title>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-    <input id=cep>
-    <button type="button" onclick="consultaCep()">Consultar CEP</button>
-    <p id="logradouro"></p>
-    <p id="bairro"></p>
-    <p id="localidade"></p>
-    <p id="uf"></p>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand">Consulta CEP</a>
+        <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="CEP" id="cep">
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="consultaCep()">Buscar</button>
+        </div>
+      </nav>
+      <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <h3 id="title_cep">CEP</h3>
+        </div>
+        <div class="row" style="margin-top: 20px;"></div>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Logradouro</td>
+                        <td id="logradouro"></td>
+                    </tr>
+                    <tr>
+                        <td>Bairro</td>
+                        <td id="bairro"></td>
+                    </tr>
+                    <tr>
+                        <td>Localidade</td>
+                        <td id="localidade"></td>
+                    </tr>
+                    <tr>
+                        <td>UF</td>
+                        <td id="uf"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
 </body>
 </html>
